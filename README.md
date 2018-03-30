@@ -9,5 +9,7 @@
 * after cloning the project open cmd in the ./ repo and run
 
 **firebase login**
+
 **firebase use --add** (choose friendlychat-enis)
+
 **firebase serve** (then open browser to localhost:5000)
