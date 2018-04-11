@@ -1,0 +1,78 @@
+[debug] [2018-03-30T21:13:12.625Z] ----------------------------------------------------------------------
+[debug] [2018-03-30T21:13:12.628Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase use --add
+[debug] [2018-03-30T21:13:12.628Z] CLI Version:   3.17.7
+[debug] [2018-03-30T21:13:12.628Z] Platform:      win32
+[debug] [2018-03-30T21:13:12.628Z] Node Version:  v8.10.0
+[debug] [2018-03-30T21:13:12.629Z] Time:          Fri Mar 30 2018 22:13:12 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-03-30T21:13:12.629Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-30T21:13:12.641Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2018-03-30T21:13:12.642Z] > authorizing via signed-in user
+[debug] [2018-03-30T21:13:12.644Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-30T21:13:12.644Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/BcSXmyW45VlzrVbvXQOpcK0WCNJ8g3v9PqDBKg8Z3IM',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Mar 30 2018 22:13:12 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-03-30T21:13:13.188Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-30T21:13:13.198Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
+  
+ Fri Mar 30 2018 22:13:13 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-03-30T21:13:14.316Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-30T21:14:20.927Z] ----------------------------------------------------------------------
+[debug] [2018-03-30T21:14:20.931Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase use --add
+[debug] [2018-03-30T21:14:20.931Z] CLI Version:   3.17.7
+[debug] [2018-03-30T21:14:20.931Z] Platform:      win32
+[debug] [2018-03-30T21:14:20.931Z] Node Version:  v8.10.0
+[debug] [2018-03-30T21:14:20.932Z] Time:          Fri Mar 30 2018 22:14:20 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-03-30T21:14:20.932Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-30T21:14:20.945Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2018-03-30T21:14:20.946Z] > authorizing via signed-in user
+[debug] [2018-03-30T21:14:20.948Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
+  
+ Fri Mar 30 2018 22:14:20 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-03-30T21:14:22.046Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-11T15:59:53.780Z] ----------------------------------------------------------------------
+[debug] [2018-04-11T15:59:53.783Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-11T15:59:53.784Z] CLI Version:   3.17.7
+[debug] [2018-04-11T15:59:53.784Z] Platform:      win32
+[debug] [2018-04-11T15:59:53.784Z] Node Version:  v8.10.0
+[debug] [2018-04-11T15:59:53.784Z] Time:          Wed Apr 11 2018 16:59:53 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-11T15:59:53.784Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-11T15:59:53.804Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-11T15:59:53.805Z] > authorizing via signed-in user
+[debug] [2018-04-11T15:59:53.807Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-11T15:59:53.808Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/BcSXmyW45VlzrVbvXQOpcK0WCNJ8g3v9PqDBKg8Z3IM',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Apr 11 2018 16:59:53 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-11T15:59:54.708Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-11T15:59:54.730Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+  
+ Wed Apr 11 2018 16:59:54 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-11T15:59:55.934Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-11T15:59:55.935Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+  
+ Wed Apr 11 2018 16:59:55 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-11T15:59:56.727Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-11T15:59:56.728Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+  
+ Wed Apr 11 2018 16:59:56 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-11T15:59:58.080Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\enis\protocole\project\firebase\friendlychat-web\web'...
+[info] 
+[debug] [2018-04-11T15:59:58.083Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+  
+ Wed Apr 11 2018 16:59:58 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-11T16:00:00.546Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+

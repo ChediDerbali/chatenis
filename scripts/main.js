@@ -261,7 +261,8 @@ FriendlyChat.MESSAGE_TEMPLATE =
       '<div class="spacing"><div class="pic"></div></div>' +
       '<div class="message"></div>' +
       '<div class="name"></div>' +
-      '++++++++++++++++++++' +
+      '<div class="key"></div>'+
+      '<button id="decrypt">dkfjdf</button>' +
     '</div>';
 
 // A loading image URL.
@@ -282,6 +283,7 @@ FriendlyChat.prototype.displayMessage = function(key, name, text, picUrl, imageU
     div.querySelector('.pic').style.backgroundImage = 'url(' + picUrl + ')';
   }
   div.querySelector('.name').textContent = name;
+  div.querySelector('.key').textContent = key;
   var messageElement = div.querySelector('.message');
   if (text) { // If the message is text.
     messageElement.textContent = text;
