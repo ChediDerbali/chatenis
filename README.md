@@ -1,7 +1,15 @@
-# Firebase Web Codelab - Final code
+# we are going to edit [./scripts/crypto.js]
 
-This folder contains the final code of the [Firebase Web Codelab](https://codelabs.developers.google.com/codelabs/firebase-web/).
+* you will find every crypto with its parameters.
 
-You can use this app directly if you'd like to see the finished app but before you do follow the [Create a Firebase Project and Setup](https://codelabs.developers.google.com/codelabs/firebase-web/#3) step of the Codelab instructions
+* we still have to make the dicypher functions later
 
-If you'd like to follow the step by step codelab start with the [web-start](../web-start) directory.
+* website : [friendlychat-enis.firebaseapp.com]
+
+* after cloning the project open cmd in the ./ repo and run
+
+**firebase login**
+
+**firebase use --add** (choose friendlychat-enis)
+
+**firebase serve** (then open browser to localhost:5000)
