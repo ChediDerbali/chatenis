@@ -1,78 +1,468 @@
-[debug] [2018-03-30T21:13:12.625Z] ----------------------------------------------------------------------
-[debug] [2018-03-30T21:13:12.628Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase use --add
-[debug] [2018-03-30T21:13:12.628Z] CLI Version:   3.17.7
-[debug] [2018-03-30T21:13:12.628Z] Platform:      win32
-[debug] [2018-03-30T21:13:12.628Z] Node Version:  v8.10.0
-[debug] [2018-03-30T21:13:12.629Z] Time:          Fri Mar 30 2018 22:13:12 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-03-30T21:13:12.629Z] ----------------------------------------------------------------------
+[debug] [2018-04-18T09:01:43.806Z] ----------------------------------------------------------------------
+[debug] [2018-04-18T09:01:43.809Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-18T09:01:43.809Z] CLI Version:   3.18.4
+[debug] [2018-04-18T09:01:43.809Z] Platform:      win32
+[debug] [2018-04-18T09:01:43.809Z] Node Version:  v8.10.0
+[debug] [2018-04-18T09:01:43.809Z] Time:          Wed Apr 18 2018 10:01:43 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:01:43.809Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-03-30T21:13:12.641Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
-[debug] [2018-03-30T21:13:12.642Z] > authorizing via signed-in user
-[debug] [2018-03-30T21:13:12.644Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-03-30T21:13:12.644Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/BcSXmyW45VlzrVbvXQOpcK0WCNJ8g3v9PqDBKg8Z3IM',
-  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
-  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
-  grant_type: 'refresh_token',
-  scope: 'email https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Fri Mar 30 2018 22:13:12 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-03-30T21:13:13.188Z] <<< HTTP RESPONSE 200
-[debug] [2018-03-30T21:13:13.198Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
-  
- Fri Mar 30 2018 22:13:13 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-03-30T21:13:14.316Z] <<< HTTP RESPONSE 200
-[debug] [2018-03-30T21:14:20.927Z] ----------------------------------------------------------------------
-[debug] [2018-03-30T21:14:20.931Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase use --add
-[debug] [2018-03-30T21:14:20.931Z] CLI Version:   3.17.7
-[debug] [2018-03-30T21:14:20.931Z] Platform:      win32
-[debug] [2018-03-30T21:14:20.931Z] Node Version:  v8.10.0
-[debug] [2018-03-30T21:14:20.932Z] Time:          Fri Mar 30 2018 22:14:20 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-03-30T21:14:20.932Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-03-30T21:14:20.945Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
-[debug] [2018-03-30T21:14:20.946Z] > authorizing via signed-in user
-[debug] [2018-03-30T21:14:20.948Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
-  
- Fri Mar 30 2018 22:14:20 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-03-30T21:14:22.046Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-11T15:59:53.780Z] ----------------------------------------------------------------------
-[debug] [2018-04-11T15:59:53.783Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-04-11T15:59:53.784Z] CLI Version:   3.17.7
-[debug] [2018-04-11T15:59:53.784Z] Platform:      win32
-[debug] [2018-04-11T15:59:53.784Z] Node Version:  v8.10.0
-[debug] [2018-04-11T15:59:53.784Z] Time:          Wed Apr 11 2018 16:59:53 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-04-11T15:59:53.784Z] ----------------------------------------------------------------------
-[debug] 
-[debug] [2018-04-11T15:59:53.804Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-04-11T15:59:53.805Z] > authorizing via signed-in user
-[debug] [2018-04-11T15:59:53.807Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-04-11T15:59:53.808Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/BcSXmyW45VlzrVbvXQOpcK0WCNJ8g3v9PqDBKg8Z3IM',
+[debug] [2018-04-18T09:01:43.821Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-18T09:01:43.821Z] > authorizing via signed-in user
+[debug] [2018-04-18T09:01:43.823Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-18T09:01:43.823Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/9Pff-kXvhk35gAwbv2mJJFxcnihpPYcTqpktGcsYrhc',
   client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
   scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Wed Apr 11 2018 16:59:53 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-04-11T15:59:54.708Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-11T15:59:54.730Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+ Wed Apr 18 2018 10:01:43 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:01:50.391Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:01:50.404Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
   
- Wed Apr 11 2018 16:59:54 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-04-11T15:59:55.934Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-11T15:59:55.935Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+ Wed Apr 18 2018 10:01:50 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:01:51.260Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:01:51.261Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
   
- Wed Apr 11 2018 16:59:55 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-04-11T15:59:56.727Z] <<< HTTP RESPONSE 200
-[debug] [2018-04-11T15:59:56.728Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+ Wed Apr 18 2018 10:01:51 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:01:51.976Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:01:51.977Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
   
- Wed Apr 11 2018 16:59:56 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-04-11T15:59:58.080Z] <<< HTTP RESPONSE 200
+ Wed Apr 18 2018 10:01:51 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:01:52.901Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'D:\enis\protocole\project\firebase\friendlychat-web\web'...
 [info] 
-[debug] [2018-04-11T15:59:58.083Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-04-18T09:01:53.680Z] Fetching environment
+[debug] [2018-04-18T09:01:53.683Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390:getServerAppConfig  
   
- Wed Apr 11 2018 16:59:58 GMT+0100 (W. Central Africa Standard Time)
-[debug] [2018-04-11T16:00:00.546Z] <<< HTTP RESPONSE 200
+ Wed Apr 18 2018 10:01:53 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:01:53.684Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+  
+ Wed Apr 18 2018 10:01:53 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:01:54.329Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:01:54.347Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:01:54.348Z] Starting @google-cloud/functions-emulator
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
 
+[debug] [2018-04-18T09:01:56.387Z] Parsing function triggers
+[debug] [2018-04-18T09:16:29.166Z] Error: connect ETIMEDOUT 172.217.22.131:443
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-18T09:16:29.169Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketCloseListener (_http_client.js:363:23)
+    at emitOne (events.js:121:20)
+    at TLSSocket.emit (events.js:211:7)
+    at _handle.close (net.js:567:12)
+    at TCP.done [as _onclose] (_tls_wrap.js:356:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-18T09:17:58.046Z] ----------------------------------------------------------------------
+[debug] [2018-04-18T09:17:58.049Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-18T09:17:58.049Z] CLI Version:   3.18.4
+[debug] [2018-04-18T09:17:58.049Z] Platform:      win32
+[debug] [2018-04-18T09:17:58.049Z] Node Version:  v8.10.0
+[debug] [2018-04-18T09:17:58.050Z] Time:          Wed Apr 18 2018 10:17:58 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:17:58.050Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-18T09:17:58.062Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-18T09:17:58.063Z] > authorizing via signed-in user
+[debug] [2018-04-18T09:17:58.065Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+  
+ Wed Apr 18 2018 10:17:58 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:18:09.174Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:18:09.175Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+  
+ Wed Apr 18 2018 10:18:09 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:18:09.866Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:18:09.867Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+  
+ Wed Apr 18 2018 10:18:09 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:18:10.890Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\enis\protocole\project\firebase\friendlychat-web\web'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-04-18T09:18:11.679Z] Fetching environment
+[debug] [2018-04-18T09:18:11.681Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390:getServerAppConfig  
+  
+ Wed Apr 18 2018 10:18:11 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:18:11.682Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+  
+ Wed Apr 18 2018 10:18:11 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:18:15.946Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-04-18T09:18:16.188Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:18:16.189Z] Starting @google-cloud/functions-emulator
+[debug] [2018-04-18T09:18:18.230Z] Parsing function triggers
+[debug] [2018-04-18T09:20:59.271Z] Error: connect ETIMEDOUT 216.58.215.35:443
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-18T09:20:59.273Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketCloseListener (_http_client.js:363:23)
+    at emitOne (events.js:121:20)
+    at TLSSocket.emit (events.js:211:7)
+    at _handle.close (net.js:567:12)
+    at TCP.done [as _onclose] (_tls_wrap.js:356:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-18T09:21:09.424Z] ----------------------------------------------------------------------
+[debug] [2018-04-18T09:21:09.426Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-18T09:21:09.427Z] CLI Version:   3.18.4
+[debug] [2018-04-18T09:21:09.427Z] Platform:      win32
+[debug] [2018-04-18T09:21:09.427Z] Node Version:  v8.10.0
+[debug] [2018-04-18T09:21:09.427Z] Time:          Wed Apr 18 2018 10:21:09 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:21:09.427Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-18T09:21:09.437Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-18T09:21:09.438Z] > authorizing via signed-in user
+[debug] [2018-04-18T09:21:09.440Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+  
+ Wed Apr 18 2018 10:21:09 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:21:10.314Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:21:10.314Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+  
+ Wed Apr 18 2018 10:21:10 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:21:10.992Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:21:10.993Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+  
+ Wed Apr 18 2018 10:21:10 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:21:11.875Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\enis\protocole\project\firebase\friendlychat-web\web'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-04-18T09:21:12.620Z] Fetching environment
+[debug] [2018-04-18T09:21:12.622Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390:getServerAppConfig  
+  
+ Wed Apr 18 2018 10:21:12 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:21:12.623Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+  
+ Wed Apr 18 2018 10:21:12 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:21:13.183Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:21:13.200Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:21:13.200Z] Starting @google-cloud/functions-emulator
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-04-18T09:21:15.247Z] Parsing function triggers
+[debug] [2018-04-18T09:21:38.242Z] Error: connect ETIMEDOUT 216.58.215.35:443
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-18T09:21:38.244Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketCloseListener (_http_client.js:363:23)
+    at emitOne (events.js:121:20)
+    at TLSSocket.emit (events.js:211:7)
+    at _handle.close (net.js:567:12)
+    at TCP.done [as _onclose] (_tls_wrap.js:356:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-18T09:22:10.470Z] ----------------------------------------------------------------------
+[debug] [2018-04-18T09:22:10.472Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-18T09:22:10.473Z] CLI Version:   3.18.4
+[debug] [2018-04-18T09:22:10.473Z] Platform:      win32
+[debug] [2018-04-18T09:22:10.473Z] Node Version:  v8.10.0
+[debug] [2018-04-18T09:22:10.473Z] Time:          Wed Apr 18 2018 10:22:10 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:22:10.473Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-18T09:22:10.483Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-18T09:22:10.484Z] > authorizing via signed-in user
+[debug] [2018-04-18T09:22:10.486Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+  
+ Wed Apr 18 2018 10:22:10 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:22:11.440Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:22:11.441Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+  
+ Wed Apr 18 2018 10:22:11 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:22:12.128Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:22:12.128Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+  
+ Wed Apr 18 2018 10:22:12 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:22:15.998Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\enis\protocole\project\firebase\friendlychat-web\web'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-04-18T09:22:16.746Z] Fetching environment
+[debug] [2018-04-18T09:22:16.749Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390:getServerAppConfig  
+  
+ Wed Apr 18 2018 10:22:16 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:22:16.749Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+  
+ Wed Apr 18 2018 10:22:16 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-18T09:22:17.350Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:22:17.368Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-18T09:22:17.368Z] Starting @google-cloud/functions-emulator
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-04-18T09:22:19.596Z] Parsing function triggers
+[debug] [2018-04-18T09:23:19.131Z] Error: connect ETIMEDOUT 216.58.204.99:443
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-18T09:23:19.134Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketCloseListener (_http_client.js:363:23)
+    at emitOne (events.js:121:20)
+    at TLSSocket.emit (events.js:211:7)
+    at _handle.close (net.js:567:12)
+    at TCP.done [as _onclose] (_tls_wrap.js:356:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-19T10:11:24.198Z] ----------------------------------------------------------------------
+[debug] [2018-04-19T10:11:24.201Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-19T10:11:24.201Z] CLI Version:   3.18.4
+[debug] [2018-04-19T10:11:24.201Z] Platform:      win32
+[debug] [2018-04-19T10:11:24.201Z] Node Version:  v8.10.0
+[debug] [2018-04-19T10:11:24.202Z] Time:          Thu Apr 19 2018 11:11:24 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-19T10:11:24.202Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-19T10:11:24.219Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-19T10:11:24.220Z] > authorizing via signed-in user
+[debug] [2018-04-19T10:11:24.222Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-19T10:11:24.222Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/9Pff-kXvhk35gAwbv2mJJFxcnihpPYcTqpktGcsYrhc',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Apr 19 2018 11:11:24 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-19T10:11:24.611Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-19T10:11:24.623Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+  
+ Thu Apr 19 2018 11:11:24 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-19T10:11:25.644Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-19T10:11:25.644Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+  
+ Thu Apr 19 2018 11:11:25 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-19T10:11:26.496Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-19T10:11:26.497Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+  
+ Thu Apr 19 2018 11:11:26 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-19T10:11:27.724Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\enis\protocole\project\firebase\friendlychat-web\web'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-04-19T10:11:29.065Z] Fetching environment
+[debug] [2018-04-19T10:11:29.067Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390:getServerAppConfig  
+  
+ Thu Apr 19 2018 11:11:29 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-19T10:11:29.068Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+  
+ Thu Apr 19 2018 11:11:29 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-19T10:11:29.647Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-19T10:11:29.681Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-19T10:11:29.681Z] Starting @google-cloud/functions-emulator
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-04-19T10:11:31.718Z] Parsing function triggers
+[debug] [2018-04-23T16:37:48.780Z] ----------------------------------------------------------------------
+[debug] [2018-04-23T16:37:48.783Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-23T16:37:48.783Z] CLI Version:   3.18.4
+[debug] [2018-04-23T16:37:48.783Z] Platform:      win32
+[debug] [2018-04-23T16:37:48.783Z] Node Version:  v8.10.0
+[debug] [2018-04-23T16:37:48.783Z] Time:          Mon Apr 23 2018 17:37:48 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:37:48.783Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-23T16:37:48.804Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-23T16:37:48.805Z] > authorizing via signed-in user
+[debug] [2018-04-23T16:37:48.807Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-23T16:37:48.807Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/9Pff-kXvhk35gAwbv2mJJFxcnihpPYcTqpktGcsYrhc',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Apr 23 2018 17:37:48 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:37:49.877Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T16:37:49.885Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+  
+ Mon Apr 23 2018 17:37:49 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:37:51.845Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T16:37:51.847Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+  
+ Mon Apr 23 2018 17:37:51 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:37:58.526Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T16:37:58.527Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+  
+ Mon Apr 23 2018 17:37:58 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:38:02.261Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\enis\protocole\project\firebase\friendlychat-web\web'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-04-23T16:38:03.759Z] Fetching environment
+[debug] [2018-04-23T16:38:03.762Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390:getServerAppConfig  
+  
+ Mon Apr 23 2018 17:38:03 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:38:03.762Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+  
+ Mon Apr 23 2018 17:38:03 GMT+0100 (W. Central Africa Standard Time)
+[warn] !  functions: Error from emulator. FirebaseError: Server Error. getaddrinfo ENOTFOUND mobilesdk-pa.googleapis.com mobilesdk-pa.googleapis.com:443
+[debug] [2018-04-23T16:38:15.555Z] Error
+    at new FirebaseError (C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\lib\error.js:11:16)
+    at Request._callback (C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:35:11)
+    at self.callback (C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:186:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:878:8)
+    at emitOne (events.js:116:13)
+    at ClientRequest.emit (events.js:211:7)
+    at TLSSocket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+[debug] [2018-04-23T16:38:26.538Z] Error: getaddrinfo ENOTFOUND mobilesdk-pa.googleapis.com mobilesdk-pa.googleapis.com:443
+    at errnoException (dns.js:50:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND mobilesdk-pa.googleapis.com mobilesdk-pa.googleapis.com:443
+[debug] [2018-04-23T16:41:00.467Z] ----------------------------------------------------------------------
+[debug] [2018-04-23T16:41:00.469Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-23T16:41:00.469Z] CLI Version:   3.18.4
+[debug] [2018-04-23T16:41:00.469Z] Platform:      win32
+[debug] [2018-04-23T16:41:00.469Z] Node Version:  v8.10.0
+[debug] [2018-04-23T16:41:00.470Z] Time:          Mon Apr 23 2018 17:41:00 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:41:00.470Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-23T16:41:00.481Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-23T16:41:00.482Z] > authorizing via signed-in user
+[debug] [2018-04-23T16:41:00.484Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+  
+ Mon Apr 23 2018 17:41:00 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:41:10.529Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T16:41:10.530Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+  
+ Mon Apr 23 2018 17:41:10 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:41:11.438Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T16:41:11.439Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+  
+ Mon Apr 23 2018 17:41:11 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:41:16.656Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\enis\protocole\project\firebase\friendlychat-web\web'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-04-23T16:41:17.817Z] Fetching environment
+[debug] [2018-04-23T16:41:17.820Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390:getServerAppConfig  
+  
+ Mon Apr 23 2018 17:41:17 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:41:17.821Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+  
+ Mon Apr 23 2018 17:41:17 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T16:41:28.234Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T16:41:28.235Z] Starting @google-cloud/functions-emulator
+[debug] [2018-04-23T16:41:28.407Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-04-23T16:41:30.262Z] Parsing function triggers
+[debug] [2018-04-23T17:30:22.670Z] Error: connect ETIMEDOUT 216.58.213.163:443
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-23T17:30:22.672Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketCloseListener (_http_client.js:363:23)
+    at emitOne (events.js:121:20)
+    at TLSSocket.emit (events.js:211:7)
+    at _handle.close (net.js:567:12)
+    at TCP.done [as _onclose] (_tls_wrap.js:356:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-04-23T17:30:33.530Z] ----------------------------------------------------------------------
+[debug] [2018-04-23T17:30:33.533Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-23T17:30:33.533Z] CLI Version:   3.18.4
+[debug] [2018-04-23T17:30:33.533Z] Platform:      win32
+[debug] [2018-04-23T17:30:33.533Z] Node Version:  v8.10.0
+[debug] [2018-04-23T17:30:33.533Z] Time:          Mon Apr 23 2018 18:30:33 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:30:33.533Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-23T17:30:33.546Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-23T17:30:33.547Z] > authorizing via signed-in user
+[debug] [2018-04-23T17:30:33.549Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-04-23T17:30:33.550Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/9Pff-kXvhk35gAwbv2mJJFxcnihpPYcTqpktGcsYrhc',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Apr 23 2018 18:30:33 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:30:33.883Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T17:30:33.889Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+  
+ Mon Apr 23 2018 18:30:33 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:30:37.855Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T17:30:37.856Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+  
+ Mon Apr 23 2018 18:30:37 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:30:38.563Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T17:30:38.565Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+  
+ Mon Apr 23 2018 18:30:38 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:30:59.972Z] Error: connect ETIMEDOUT 216.58.204.234:443
+    at Object._errnoException (util.js:1022:11)
+    at _exceptionWithHostPort (util.js:1044:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1198:14)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.204.234:443
+[debug] [2018-04-23T17:31:07.977Z] ----------------------------------------------------------------------
+[debug] [2018-04-23T17:31:07.980Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chede\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-04-23T17:31:07.980Z] CLI Version:   3.18.4
+[debug] [2018-04-23T17:31:07.980Z] Platform:      win32
+[debug] [2018-04-23T17:31:07.980Z] Node Version:  v8.10.0
+[debug] [2018-04-23T17:31:07.980Z] Time:          Mon Apr 23 2018 18:31:07 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:31:07.980Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-23T17:31:07.990Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-23T17:31:07.991Z] > authorizing via signed-in user
+[debug] [2018-04-23T17:31:07.993Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-enis  
+  
+ Mon Apr 23 2018 18:31:07 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:31:11.889Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T17:31:11.889Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-enis/tokens  
+  
+ Mon Apr 23 2018 18:31:11 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:31:12.532Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T17:31:12.534Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-enis  
+  
+ Mon Apr 23 2018 18:31:12 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:31:22.393Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\enis\protocole\project\firebase\friendlychat-web\web'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-04-23T17:31:23.378Z] Fetching environment
+[debug] [2018-04-23T17:31:23.381Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390:getServerAppConfig  
+  
+ Mon Apr 23 2018 18:31:23 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:31:23.381Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/607471149390/clients/_:getWebAppConfig  
+  
+ Mon Apr 23 2018 18:31:23 GMT+0100 (W. Central Africa Standard Time)
+[debug] [2018-04-23T17:31:24.060Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-23T17:31:24.060Z] Starting @google-cloud/functions-emulator
+[debug] [2018-04-23T17:31:24.130Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-04-23T17:31:26.602Z] Parsing function triggers

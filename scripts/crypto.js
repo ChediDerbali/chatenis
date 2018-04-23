@@ -181,3 +181,4 @@ function applyOther(char) {
     return (char + ' other to be implimented');
 
 }
+
