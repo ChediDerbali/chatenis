@@ -1,51 +1,51 @@
 function crypt() {
     if (document.getElementById('affine').checked) {
         document.getElementById('ifAffine').style.display = 'block';
-        document.getElementById('ifSubstitution').style.display = 'none';
+        document.getElementById('ifPlayfair').style.display = 'none';
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifOther').style.display = 'none';
+        document.getElementById('ifAdfvgx').style.display = 'none';
 
-    } else if (document.getElementById('substitution').checked) {
+    } else if (document.getElementById('playfair').checked) {
         document.getElementById('ifAffine').style.display = 'none';
-        document.getElementById('ifSubstitution').style.display = 'block';
+        document.getElementById('ifPlayfair').style.display = 'block';
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifOther').style.display = 'none';
+        document.getElementById('ifAdfvgx').style.display = 'none';
 
     } else if (document.getElementById('porta').checked) {
         document.getElementById('ifAffine').style.display = 'none';
-        document.getElementById('ifSubstitution').style.display = 'none';
+        document.getElementById('ifPlayfair').style.display = 'none';
         document.getElementById('ifPorta').style.display = 'block';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifOther').style.display = 'none';
+        document.getElementById('ifAdfvgx').style.display = 'none';
 
     } else if (document.getElementById('vigenere').checked) {
         document.getElementById('ifAffine').style.display = 'none';
-        document.getElementById('ifSubstitution').style.display = 'none';
+        document.getElementById('ifPlayfair').style.display = 'none';
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'block';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifOther').style.display = 'none';
+        document.getElementById('ifAdfvgx').style.display = 'none';
 
     } else if (document.getElementById('beaufort').checked) {
         document.getElementById('ifAffine').style.display = 'none';
-        document.getElementById('ifSubstitution').style.display = 'none';
+        document.getElementById('ifPlayfair').style.display = 'none';
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'block';
-        document.getElementById('ifOther').style.display = 'none';
+        document.getElementById('ifAdfvgx').style.display = 'none';
 
-    } else if (document.getElementById('other').checked) {
+    } else if (document.getElementById('adfvgx').checked) {
         document.getElementById('ifAffine').style.display = 'none';
-        document.getElementById('ifSubstitution').style.display = 'none';
+        document.getElementById('ifPlayfair').style.display = 'none';
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifOther').style.display = 'block';
+        document.getElementById('ifAdfvgx').style.display = 'block';
     }
 }
 
@@ -63,7 +63,7 @@ function applyConvert(char) {
         A = document.getElementById('A').value;
         B = document.getElementById('B').value;
         return (applyAffine(char, A, B));
-    } else if (document.getElementById('substitution').checked) {
+    } else if (document.getElementById('playfair').checked) {
         key = document.getElementById('keySub').value;
         return (applySubsti(char, key));
     } else if (document.getElementById('porta').checked) {
@@ -75,8 +75,9 @@ function applyConvert(char) {
     } else if (document.getElementById('beaufort').checked) {
         key = document.getElementById('keyBeaufort').value;
         return (applyBeaufort(char, key));
-    } else if (document.getElementById('other').checked) {
-        return (applyOther(char));
+    } else if (document.getElementById('adfvgx').checked) {
+        key = document.getElementById('keyAdfvgx').value;
+        return (applyadfvgx(char,key));
     } else {
         return (char);
     }
@@ -101,8 +102,8 @@ function applyAffine(char, a, b) {
 }
 
 function applySubsti(char, key) {
-    //TO DO : Substitution to be implimented
-    return (char + ' Substitution to be implimented (' + key + ')')
+    //TO DO : Playfair to be implimented
+    return (char + ' Playfair to be implimented (' + key + ')')
 }
 
 function applyPorta(char, key) {
@@ -178,9 +179,9 @@ function applyBeaufort(char, key) {
 
 }
 
-function applyOther(char) {
-    //TO DO : other to be implimented
-    return (char + ' other to be implimented');
+function applyadfvgx(char,key) {
+    //TO DO : adfvgx to be implimented
+    return (char + ' adfvgx to be implimented(' + key + ')');
 
 }
 
