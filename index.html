@@ -184,6 +184,78 @@
       </div>
 
     </div>
+    <div id="decripted-msg">
+
+        <div>
+
+            <input type="radio" onclick="javascript:decrypt();" id="deaffine" name="code" value="affine">
+            <label for="affine">affine</label>
+
+            <input type="radio" onclick="javascript:decrypt();" id="desubstitution" name="code" value="substitution">
+            <label for="substitution">substitution</label>
+
+            <input type="radio" onclick="javascript:decrypt();" id="deporta" name="code" value="porta">
+            <label for="porta">porta</label>
+
+            <input type="radio" onclick="javascript:decrypt();" id="devigenere" name="code" value="vigenere">
+            <label for="vigenere">vigenere</label>
+
+            <input type="radio" onclick="javascript:decrypt();" id="debeaufort" name="code" value="beaufort">
+            <label for="beaufort">beaufort</label>
+
+            <input type="radio" onclick="javascript:decrypt();" id="deother" name="code" value="other">
+            <label for="other">other</label>
+
+          </div>
+
+          <div class="form-group">
+
+            <div id="deifAffine" style="display: none">
+              <h3>Affine</h3>
+              <label for="A">A</label>
+              <input  class="form-control" type="number" id="A" name="A" value="0">
+              
+              <label for="B">B</label>
+              <input class="form-control" type="number" id="B" name="B" value="3">
+              
+            </div>
+
+            <div id="deifSubstitution" style="display: none">
+              <h3>Substitution</h3>
+              <label for="keySub">key</label>
+              <input class="form-control" type="text" id="keySub" name="KeySub">
+              
+            </div>
+
+            <div id="deifPorta" style="display: none">
+              <h3>Porta</h3>
+              <label for="keyPorta">key</label>
+              <input class="form-control" type="text" id="keyPorta" name="keyPorta">
+              
+            </div>
+
+            <div id="deifVigenere" style="display: none">
+              <h3>Vigenere</h3>
+              <label for="keyVigenere">key</label>
+              <input class="form-control" type="text" id="keyVigenere" name="keyVigenere">
+              
+            </div>
+
+            <div id="deifBeaufort" style="display: none">
+              <h3>Beaufort</h3>
+              <label for="keyBeaufort">key</label>
+              <input class="form-control" type="text" id="keyBeaufort" name="keyBeaufort">
+              
+            </div>
+
+            <div id="deifOther" style="display: none">
+              <h3>other</h3>
+            </div>
+
+          </div>
+
+
+    </div>
   </main>
 
 
@@ -192,10 +264,12 @@
   <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
   <script src="/__/firebase/4.1.3/firebase.js"></script>
   <script src="/__/firebase/init.js"></script>
-  <script src="./scripts/crypto.js"></script>
+  
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="scripts/main.js"></script>
+  <script src="./scripts/crypto.js"></script>
+  <script src="./scripts/decrypto.js"></script>
 </body>
 
 </html>

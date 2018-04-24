@@ -16,6 +16,7 @@
 // main.js
 'use strict';
 
+
 // Initializes FriendlyChat.
 function FriendlyChat() {
   this.checkSetup();
@@ -264,6 +265,7 @@ FriendlyChat.MESSAGE_TEMPLATE =
   '<div class="message"></div>' +
   '<div class="name"></div>' +
   '<div class="key"></div>' +
+  '<div class="unn">qsds</div>' +
   '<button type="button" class="btn btn-success btn-sm" onclick="">Decypher</button>' +
   '</div>';
 
@@ -286,8 +288,9 @@ FriendlyChat.prototype.displayMessage = function (key, name, text, picUrl, image
   }
   div.querySelector('.name').textContent = name;
   div.querySelector('.message').id = "msg" + key;
+  div.querySelector('.unn').id = "un" + key;
   div.querySelector('.key').textContent = key;
-  div.querySelector('.btn').setAttribute("onclick", "decipher('msg" + key + "')")
+  div.querySelector('.btn').setAttribute("onclick", "decipher('msg" + key + "','un" + key + "')")
   var messageElement = div.querySelector('.message');
   if (text) { // If the message is text.
     messageElement.textContent = text;
@@ -331,9 +334,4 @@ FriendlyChat.prototype.checkSetup = function () {
 
 window.onload = function () {
   window.friendlyChat = new FriendlyChat();
-};
-
-function decipher(c) {
-  var msg = document.getElementById(c).innerHTML;
-  console.log(msg);
 };

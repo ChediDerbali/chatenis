@@ -49,6 +49,8 @@ function crypt() {
     }
 }
 
+
+
 function conversion(c) {
     char = document.getElementById(c).value;
     char = applyConvert(char);
