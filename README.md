@@ -1,4 +1,4 @@
-# we are going to edit [./scripts/crypto.js]
+# we are going to edit [./scripts/crypto.js] && [./scripts/decrypto.js] 
 
 * you will find every crypto with its parameters.
 
