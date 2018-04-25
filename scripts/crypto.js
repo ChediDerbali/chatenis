@@ -76,8 +76,7 @@ function applyConvert(char) {
         key = document.getElementById('keyBeaufort').value;
         return (applyBeaufort(char, key));
     } else if (document.getElementById('None').checked) {
-        key = document.getElementById('keyNone').value;
-        return (applyNone(char, key));
+        return (applyNone(char));
     } else {
         return (char);
     }
@@ -214,7 +213,7 @@ function applyBeaufort(char, key) {
 
 }
 
-function applyNone(char, key) {
+function applyNone(char) {
     //TO DO : None to be implimented
     return (char);
 

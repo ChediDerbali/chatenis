@@ -78,7 +78,7 @@ function unapplyConvert(char) {
         return (unapplyBeaufort(char, key));
     } else if (document.getElementById('deNone').checked) {
         key = document.getElementById('dekeyNone').value;
-        return (unapplyNone(char, key));
+        return (unapplyNone(char));
     } else {
         return (char);
     }
@@ -91,8 +91,43 @@ function unapplyAffine(char, a, b) {
 };
 
 function unapplyPlay(char, key) {
-    //TO DO : Playfair to be implimented
-    return (char + ' Playfair to be implimented00000000000 (' + key + ')')
+    var Alphabet = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+    var resultat = "";
+    char = char.toUpperCase();
+    key = key.toUpperCase();
+    var matrice = "";
+    var j = 0;
+    for (var i = 0; i < key.length; i++){
+        if (matrice.indexOf(key[i]) < 0){
+            matrice+=key[i];
+        }
+    }
+    for (var i=0;i<25;i++){
+        if(matrice.length<25){
+            if(matrice.indexOf(Alphabet[i]) < 0){
+                matrice+=Alphabet[i];
+            }
+        }
+    }
+    while(j < char.length-1){
+        var a = matrice.indexOf(char[j]);
+        var b = matrice.indexOf(char[j+1]); 
+        if(parseInt(a/5)==parseInt(b/5)){
+            resultat += matrice[5*parseInt(a/5)+(5+a-1)%5];
+            resultat += matrice[5*parseInt(b/5)+(5+b-1)%5];
+        }
+        else if(a%5==b%5){
+            resultat += matrice[parseInt(a-5+25)%25];
+            resultat += matrice[parseInt(b-5+25)%25];
+        }
+        else{
+            resultat += matrice[(5*parseInt(a/5)+b%5)%25];
+            resultat += matrice[(5*parseInt(b/5)+a%5)%25];
+        }
+        j = j+2;
+    }
+    
+    return (resultat);
 };
 
 function unapplyPorta(char, key) {
