@@ -58,7 +58,11 @@
       <div class="navbar-right">
         <div id="user-container">
           <div hidden id="signed">
+            <button id="sign-out" class="btn btn-danger navbar-btn">
+              Sign-out
+            </button>
             <ul class="nav navbar-nav">
+              
               <li>
                 <div id="user-pic"></div>
               </li>
@@ -66,9 +70,6 @@
                 <div id="user-name" class="navbar-text"></div>
               </li>
             </ul>
-            <button id="sign-out" class="btn btn-danger navbar-btn">
-              Sign-out
-            </button>
           </div>
           <div hidden id="not-signed">
             <button id="sign-in" class="btn btn-danger navbar-btn">
@@ -83,110 +84,131 @@
 
   <!-- end of header-->
   <main class="mdl-layout__content mdl-color--grey-100">
-    <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
+    <div class="container">
+      <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
 
-      <!-- Messages container -->
-      <div id="messages-card" class="">
-        <div id="messages">
-          <span id="message-filler"></span>
+        <!-- Messages container -->
+        <div id="messages-card" class="">
+          <div id="messages">
+            <span id="message-filler"></span>
+          </div>
+          <hr/>
+          <form id="message-form" action="#">
+            <div class="row justify-content-center">
+              <div class="form-group col-md-11">
+                <input class="form-control" type="text" id="message0" placeholder="Message ...">
+              </div>
+              <div class="col-md-1">
+                <button onclick="javascript:conversion('message0');" class="btn btn-primary">send</button>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="container">
+
+                <input type="radio" onclick="javascript:crypt();" id="affine" name="code" value="affine">
+                <label for="affine">affine</label>
+
+                <input type="radio" onclick="javascript:crypt();" id="playfair" name="code" value="playfair">
+                <label for="playfair">playfair</label>
+
+                <input type="radio" onclick="javascript:crypt();" id="porta" name="code" value="porta">
+                <label for="porta">porta</label>
+
+                <input type="radio" onclick="javascript:crypt();" id="vigenere" name="code" value="vigenere">
+                <label for="vigenere">vigenere</label>
+
+                <input type="radio" onclick="javascript:crypt();" id="beaufort" name="code" value="beaufort">
+                <label for="beaufort">beaufort</label>
+
+                <input type="radio" onclick="javascript:crypt();" id="None" name="code" value="None">
+                <label for="None">None</label>
+
+
+              </div>
+            </div>
+
+            <div class="form-group">
+
+              <div id="ifAffine" style="display: none" class="col-md-12">
+
+
+                <h3>Affine</h3>
+
+
+                <div class="row">
+                  <div class="col-md-2">
+                    <label for="A">A</label>
+                    <input class="form-control" type="number" id="A" name="A" value="1">
+                  </div>
+
+                  <div class="col-md-2">
+                    <label for="B">B</label>
+                    <input class="form-control" type="number" id="B" name="B" value="3">
+                  </div>
+                </div>
+
+              </div>
+
+
+
+              <div id="ifPlayfair" style="display: none" class="col-md-4">
+                <h3>Playfair</h3>
+                <label for="keyPla">key</label>
+                <input class="form-control" type="text" id="keyPla" name="KeyPla">
+
+              </div>
+
+              <div id="ifPorta" style="display: none" class="col-md-4">
+                <h3>Porta</h3>
+                <label for="keyPorta">key</label>
+                <input class="form-control" type="text" id="keyPorta" name="keyPorta">
+
+              </div>
+
+              <div id="ifVigenere" style="display: none" class="col-md-4">
+                <h3>Vigenere</h3>
+                <label for="keyVigenere">key</label>
+                <input class="form-control" type="text" id="keyVigenere" name="keyVigenere">
+
+              </div>
+
+              <div id="ifBeaufort" style="display: none" class="col-md-4">
+                <h3>Beaufort</h3>
+                <label for="keyBeaufort">key</label>
+                <input class="form-control" type="text" id="keyBeaufort" name="keyBeaufort">
+
+              </div>
+
+              <div id="ifNone" style="display: none" class="col-md-4">
+                <h3>None</h3>
+                <label for="dekeyNone">key</label>
+                <input class="form-control" type="text" id="keyNone" name="keyNone">
+              </div>
+              
+              <div id="message"> </div>
+            </div>
+            <hr/>
+
+
+
+          </form>
+
+          <form id="image-form" action="#" class="hide">
+            <input id="mediaCapture" type="file" accept="image/*,capture=camera">
+            <button id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--amber-400 mdl-color-text--white">
+              <i class="material-icons">image</i>
+            </button>
+            
+          </form>
         </div>
-        <form id="message-form" action="#">
-          <div class="form-group">
-            <input class="form-control" type="text" id="message0" placeholder="Message ...">
-
-          </div>
-
-
-
-          <div>
-
-            <input type="radio" onclick="javascript:crypt();" id="affine" name="code" value="affine">
-            <label for="affine">affine</label>
-
-            <input type="radio" onclick="javascript:crypt();" id="playfair" name="code" value="playfair">
-            <label for="playfair">playfair</label>
-
-            <input type="radio" onclick="javascript:crypt();" id="porta" name="code" value="porta">
-            <label for="porta">porta</label>
-
-            <input type="radio" onclick="javascript:crypt();" id="vigenere" name="code" value="vigenere">
-            <label for="vigenere">vigenere</label>
-
-            <input type="radio" onclick="javascript:crypt();" id="beaufort" name="code" value="beaufort">
-            <label for="beaufort">beaufort</label>
-
-            <input type="radio" onclick="javascript:crypt();" id="adfvgx" name="code" value="adfvgx">
-            <label for="adfvgx">ADFVGX</label>
-
-          </div>
-
-          <div class="form-group">
-
-            <div id="ifAffine" style="display: none">
-              <h3>Affine</h3>
-              <label for="A">A</label>
-              <input class="form-control" type="number" id="A" name="A" value="0">
-
-              <label for="B">B</label>
-              <input class="form-control" type="number" id="B" name="B" value="3">
-
-            </div>
-
-            <div id="ifPlayfair" style="display: none">
-              <h3>Playfair</h3>
-              <label for="keyPla">key</label>
-              <input class="form-control" type="text" id="keyPla" name="KeyPla">
-
-            </div>
-
-            <div id="ifPorta" style="display: none">
-              <h3>Porta</h3>
-              <label for="keyPorta">key</label>
-              <input class="form-control" type="text" id="keyPorta" name="keyPorta">
-
-            </div>
-
-            <div id="ifVigenere" style="display: none">
-              <h3>Vigenere</h3>
-              <label for="keyVigenere">key</label>
-              <input class="form-control" type="text" id="keyVigenere" name="keyVigenere">
-
-            </div>
-
-            <div id="ifBeaufort" style="display: none">
-              <h3>Beaufort</h3>
-              <label for="keyBeaufort">key</label>
-              <input class="form-control" type="text" id="keyBeaufort" name="keyBeaufort">
-
-            </div>
-
-            <div id="ifAdfvgx" style="display: none">
-              <h3>ADFVGX</h3>
-              <label for="dekeyadfvgx">key</label>
-              <input class="form-control" type="text" id="keyAdfvgx" name="keyadfvgx">
-            </div>
-
-          </div>
-          <button onclick="javascript:conversion('message0');" class="btn btn-primary">convert</button>
-          <div id="message"> </div>
-
-        </form>
-
-        <form id="image-form" action="#" class="hide">
-          <input id="mediaCapture" type="file" accept="image/*,capture=camera">
-          <button id="submitImage" title="Add an image" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--amber-400 mdl-color-text--white">
-            <i class="material-icons">image</i>
-          </button>
-        </form>
       </div>
     </div>
 
-    <div id="must-signin-snackbar" class="mdl-js-snackbar mdl-snackbar">
-      <div class="mdl-snackbar__text"></div>
-    </div>
-
-    </div>
-    <div id="decripted-msg">
+    
+    <div id="decripted-msg" class="container">
+      <h1 class="text-info">decipher</h1>
 
       <div>
 
@@ -205,61 +227,69 @@
         <input type="radio" onclick="javascript:decrypt();" id="debeaufort" name="code" value="beaufort">
         <label for="debeaufort">beaufort</label>
 
-        <input type="radio" onclick="javascript:decrypt();" id="deadfvgx" name="code" value="adfvgx">
-        <label for="deadfvgx">ADFVGX</label>
+        <input type="radio" onclick="javascript:decrypt();" id="deNone" name="code" value="None">
+        <label for="deNone">None</label>
 
       </div>
 
-      <div class="form-group">
+      <div class="form-group container">
 
         <div id="deifAffine" style="display: none">
           <h3>Affine</h3>
-          <label for="deA">A</label>
-          <input class="form-control" type="number" id="deA" name="A" value="0">
+          <div class="row">
+            <div class="col-md-2">
+              <label for="deA">A</label>
+              <input class="form-control" type="number" id="deA" name="A" value="1">
+            </div>
+            <div class="col-md-2">
 
-          <label for="deB">B</label>
-          <input class="form-control" type="number" id="deB" name="B" value="3">
+              <label for="deB">B</label>
+              <input class="form-control" type="number" id="deB" name="B" value="3">
 
+            </div>
+          </div>
         </div>
 
-        <div id="deifPlayfair" style="display: none">
+        <div id="deifPlayfair" style="display: none" class="col-md-4">
           <h3>Playfair</h3>
           <label for="dekeyPla">key</label>
           <input class="form-control" type="text" id="dekeyPla" name="keyPla">
 
         </div>
 
-        <div id="deifPorta" style="display: none">
+        <div id="deifPorta" style="display: none" class="col-md-4">
           <h3>Porta</h3>
           <label for="dekeyPorta">key</label>
           <input class="form-control" type="text" id="dekeyPorta" name="keyPorta">
 
         </div>
 
-        <div id="deifVigenere" style="display: none">
+        <div id="deifVigenere" style="display: none" class="col-md-4">
           <h3>Vigenere</h3>
           <label for="dekeyVigenere">key</label>
           <input class="form-control" type="text" id="dekeyVigenere" name="keyVigenere">
 
         </div>
 
-        <div id="deifBeaufort" style="display: none">
+        <div id="deifBeaufort" style="display: none" class="col-md-4">
           <h3>Beaufort</h3>
           <label for="dekeyBeaufort">key</label>
           <input class="form-control" type="text" id="dekeyBeaufort" name="keyBeaufort">
 
         </div>
 
-        <div id="deifAdfvgx" style="display: none">
-          <h3>ADFVGX</h3>
-          <label for="dekeyAdfvgx">key</label>
-          <input class="form-control" type="text" id="dekeyAdfvgx" name="keyadfvgx">
+        <div id="deifNone" style="display: none" class="col-md-4">
+          <h3>None</h3>
+          <label for="dekeyNone">key</label>
+          <input class="form-control" type="text" id="dekeyNone" name="keyNone">
         </div>
 
       </div>
 
 
     </div>
+    
+
   </main>
 
 

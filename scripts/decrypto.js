@@ -2,7 +2,7 @@ function decipher(c, d) {
     var res = document.getElementById(d);
     console.log(res);
     var msg = document.getElementById(c).innerHTML;
-    
+
     res.innerHTML = unapplyConvert(msg);;
     console.log(msg);
 };
@@ -14,7 +14,7 @@ function decrypt() {
         document.getElementById('deifPorta').style.display = 'none';
         document.getElementById('deifVigenere').style.display = 'none';
         document.getElementById('deifBeaufort').style.display = 'none';
-        document.getElementById('deifAdfvgx').style.display = 'none';
+        document.getElementById('deifNone').style.display = 'none';
 
     } else if (document.getElementById('deplayfair').checked) {
         document.getElementById('deifAffine').style.display = 'none';
@@ -22,7 +22,7 @@ function decrypt() {
         document.getElementById('deifPorta').style.display = 'none';
         document.getElementById('deifVigenere').style.display = 'none';
         document.getElementById('deifBeaufort').style.display = 'none';
-        document.getElementById('deifAdfvgx').style.display = 'none';
+        document.getElementById('deifNone').style.display = 'none';
 
     } else if (document.getElementById('deporta').checked) {
         document.getElementById('deifAffine').style.display = 'none';
@@ -30,7 +30,7 @@ function decrypt() {
         document.getElementById('deifPorta').style.display = 'block';
         document.getElementById('deifVigenere').style.display = 'none';
         document.getElementById('deifBeaufort').style.display = 'none';
-        document.getElementById('deifAdfvgx').style.display = 'none';
+        document.getElementById('deifNone').style.display = 'none';
 
     } else if (document.getElementById('devigenere').checked) {
         document.getElementById('deifAffine').style.display = 'none';
@@ -38,7 +38,7 @@ function decrypt() {
         document.getElementById('deifPorta').style.display = 'none';
         document.getElementById('deifVigenere').style.display = 'block';
         document.getElementById('deifBeaufort').style.display = 'none';
-        document.getElementById('deifAdfvgx').style.display = 'none';
+        document.getElementById('deifNone').style.display = 'none';
 
     } else if (document.getElementById('debeaufort').checked) {
         document.getElementById('deifAffine').style.display = 'none';
@@ -46,15 +46,15 @@ function decrypt() {
         document.getElementById('deifPorta').style.display = 'none';
         document.getElementById('deifVigenere').style.display = 'none';
         document.getElementById('deifBeaufort').style.display = 'block';
-        document.getElementById('deifAdfvgx').style.display = 'none';
+        document.getElementById('deifNone').style.display = 'none';
 
-    } else if (document.getElementById('deadfvgx').checked) {
+    } else if (document.getElementById('deNone').checked) {
         document.getElementById('deifAffine').style.display = 'none';
         document.getElementById('deifPlayfair').style.display = 'none';
         document.getElementById('deifPorta').style.display = 'none';
         document.getElementById('deifVigenere').style.display = 'none';
         document.getElementById('deifBeaufort').style.display = 'none';
-        document.getElementById('deifAdfvgx').style.display = 'block';
+        document.getElementById('deifNone').style.display = 'block';
     }
 };
 
@@ -66,7 +66,7 @@ function unapplyConvert(char) {
         return (unapplyAffine(char, A, B));
     } else if (document.getElementById('deplayfair').checked) {
         key = document.getElementById('dekeyPla').value;
-        return (unapplySubsti(char, key));
+        return (unapplyPlay(char, key));
     } else if (document.getElementById('deporta').checked) {
         key = document.getElementById('dekeyPorta').value;
         return (unapplyPorta(char, key));
@@ -76,9 +76,9 @@ function unapplyConvert(char) {
     } else if (document.getElementById('debeaufort').checked) {
         key = document.getElementById('dekeyBeaufort').value;
         return (unapplyBeaufort(char, key));
-    } else if (document.getElementById('deadfvgx').checked) {
-        key = document.getElementById('dekeyAdfvgx').value;
-        return (unapplyAdfvgx(char,key));
+    } else if (document.getElementById('deNone').checked) {
+        key = document.getElementById('dekeyNone').value;
+        return (unapplyNone(char, key));
     } else {
         return (char);
     }
@@ -90,7 +90,7 @@ function unapplyAffine(char, a, b) {
     return (char + ' Affine to be implimented000000000 (' + a + ',' + b + ')');
 };
 
-function unapplySubsti(char, key) {
+function unapplyPlay(char, key) {
     //TO DO : Playfair to be implimented
     return (char + ' Playfair to be implimented00000000000 (' + key + ')')
 };
@@ -101,19 +101,49 @@ function unapplyPorta(char, key) {
 };
 
 function unapplyVigenere(char, key) {
-    //TO DO : vigenere to be implimented
-    return (char + ' vigenere to be implimented00000000000000 (' + key + ')');
+    char = char.toUpperCase();
+    key = key.toUpperCase();
+    var longueur = char.length;
+    var keyLong = key.length;
+    var res = "";
+    for (var i = 0; i < longueur; i++) {
+        var val = char.charCodeAt(i) - 65;
+        var valKey = key.charCodeAt(i % keyLong) - 65;
+        if (val >= 0) {
+            res += String.fromCharCode(((val - valKey + 26) % 26) + 65);
+        }
+
+        if (char[i] == ' ')
+            res += ' ';
+    }
+
+    return (res);
 
 };
+
 
 function unapplyBeaufort(char, key) {
-    //TO DO : Beaufort to be implimented
-    return (char + ' Beaufort to be implimented00000000000000 (' + key + ')');
+    char = char.toUpperCase();
+    key = key.toUpperCase();
+    var longueur = char.length;
+    var keyLong = key.length;
+    var resultat = "";
+    for (var i = 0; i < longueur; i++) {
+        var val = char.charCodeAt(i) - 65;
+        var valKey = key.charCodeAt(i % keyLong) - 65;
+        if (val >= 0) {
+            resultat += String.fromCharCode(((valKey - val + 26) % 26) + 65);
+        }
+        if (char[i] == ' ')
+            resultat += ' ';
+    }
+
+    return (resultat);
 
 };
 
-function unapplyAdfvgx(char) {
-    //TO DO : adfvgx to be implimented
-    return (char + ' adfvgx to be implimented00000000000000 (' + key + ')');
+function unapplyNone(char) {
+    //TO DO : None to be implimented
+    return (char);
 
 };

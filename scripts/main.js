@@ -262,11 +262,11 @@ FriendlyChat.resetMaterialTextfield = function (element) {
 FriendlyChat.MESSAGE_TEMPLATE =
   '<div class="message-container">' +
   '<div class="spacing"><div class="pic"></div></div>' +
-  '<div class="message"></div>' +
-  '<div class="name"></div>' +
-  '<div class="key"></div>' +
-  '<div class="unn">qsds</div>' +
+  '<div class="name h3 text-dark"></div>' +
+  '<div class="message h6"></div>' +
   '<button type="button" class="btn btn-success btn-sm" onclick="">Decypher</button>' +
+  '<div class="unn h6 text-danger"></div>' +
+  '<div class="dropdown-divider"></div>' +
   '</div>';
 
 // A loading image URL.
@@ -289,7 +289,6 @@ FriendlyChat.prototype.displayMessage = function (key, name, text, picUrl, image
   div.querySelector('.name').textContent = name;
   div.querySelector('.message').id = "msg" + key;
   div.querySelector('.unn').id = "un" + key;
-  div.querySelector('.key').textContent = key;
   div.querySelector('.btn').setAttribute("onclick", "decipher('msg" + key + "','un" + key + "')")
   var messageElement = div.querySelector('.message');
   if (text) { // If the message is text.

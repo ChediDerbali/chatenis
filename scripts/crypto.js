@@ -5,7 +5,7 @@ function crypt() {
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifAdfvgx').style.display = 'none';
+        document.getElementById('ifNone').style.display = 'none';
 
     } else if (document.getElementById('playfair').checked) {
         document.getElementById('ifAffine').style.display = 'none';
@@ -13,7 +13,7 @@ function crypt() {
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifAdfvgx').style.display = 'none';
+        document.getElementById('ifNone').style.display = 'none';
 
     } else if (document.getElementById('porta').checked) {
         document.getElementById('ifAffine').style.display = 'none';
@@ -21,7 +21,7 @@ function crypt() {
         document.getElementById('ifPorta').style.display = 'block';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifAdfvgx').style.display = 'none';
+        document.getElementById('ifNone').style.display = 'none';
 
     } else if (document.getElementById('vigenere').checked) {
         document.getElementById('ifAffine').style.display = 'none';
@@ -29,7 +29,7 @@ function crypt() {
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'block';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifAdfvgx').style.display = 'none';
+        document.getElementById('ifNone').style.display = 'none';
 
     } else if (document.getElementById('beaufort').checked) {
         document.getElementById('ifAffine').style.display = 'none';
@@ -37,15 +37,15 @@ function crypt() {
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'block';
-        document.getElementById('ifAdfvgx').style.display = 'none';
+        document.getElementById('ifNone').style.display = 'none';
 
-    } else if (document.getElementById('adfvgx').checked) {
+    } else if (document.getElementById('None').checked) {
         document.getElementById('ifAffine').style.display = 'none';
         document.getElementById('ifPlayfair').style.display = 'none';
         document.getElementById('ifPorta').style.display = 'none';
         document.getElementById('ifVigenere').style.display = 'none';
         document.getElementById('ifBeaufort').style.display = 'none';
-        document.getElementById('ifAdfvgx').style.display = 'block';
+        document.getElementById('ifNone').style.display = 'block';
     }
 }
 
@@ -64,8 +64,8 @@ function applyConvert(char) {
         B = document.getElementById('B').value;
         return (applyAffine(char, A, B));
     } else if (document.getElementById('playfair').checked) {
-        key = document.getElementById('keySub').value;
-        return (applySubsti(char, key));
+        key = document.getElementById('keyPla').value;
+        return (applyPlay(char, key));
     } else if (document.getElementById('porta').checked) {
         key = document.getElementById('keyPorta').value;
         return (applyPorta(char, key));
@@ -75,9 +75,9 @@ function applyConvert(char) {
     } else if (document.getElementById('beaufort').checked) {
         key = document.getElementById('keyBeaufort').value;
         return (applyBeaufort(char, key));
-    } else if (document.getElementById('adfvgx').checked) {
-        key = document.getElementById('keyAdfvgx').value;
-        return (applyadfvgx(char,key));
+    } else if (document.getElementById('None').checked) {
+        key = document.getElementById('keyNone').value;
+        return (applyNone(char, key));
     } else {
         return (char);
     }
@@ -101,9 +101,44 @@ function applyAffine(char, a, b) {
     return (resultat + ' Affine to be implimented (' + a + ',' + b + ')');
 }
 
-function applySubsti(char, key) {
-    //TO DO : Playfair to be implimented
-    return (char + ' Playfair to be implimented (' + key + ')')
+function applyPlay(char, key) {
+    var Alphabet = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+    var resultat = "";
+    char = char.toUpperCase();
+    key = key.toUpperCase();
+    var matrice = "";
+    var j = 0;
+    for (var i = 0; i < key.length; i++){
+        if (matrice.indexOf(key[i]) < 0){
+            matrice+=key[i];
+        }
+    }
+    for (var i=0;i<25;i++){
+        if(matrice.length<25){
+            if(matrice.indexOf(Alphabet[i]) < 0){
+                matrice+=Alphabet[i];
+            }
+        }
+    }
+    while(j < char.length-1){
+        var a = matrice.indexOf(char[j]);
+        var b = matrice.indexOf(char[j+1]); 
+        if(parseInt(a/5)==parseInt(b/5)){
+            resultat += matrice[5*parseInt(a/5)+(a+1)%5];
+            resultat += matrice[5*parseInt(b/5)+(b+1)%5];
+        }
+        else if(a%5==b%5){
+            resultat += matrice[parseInt(a+5)%25];
+            resultat += matrice[parseInt(b+5)%25];
+        }
+        else{
+            resultat += matrice[(5*parseInt(a/5)+b%5)%25];
+            resultat += matrice[(5*parseInt(b/5)+a%5)%25];
+        }
+        j = j+2;
+    }
+    
+    return (resultat)
 }
 
 function applyPorta(char, key) {
@@ -136,7 +171,7 @@ function applyPorta(char, key) {
             resultat += ' ';
     }
 
-    return (resultat + ' Porta to be implimented (' + key + ')');
+    return (resultat);
 }
 
 function applyVigenere(char, key) {
@@ -155,7 +190,7 @@ function applyVigenere(char, key) {
         if (char[i] == ' ')
             resultat += ' ';
     }
-    return (resultat + ' vigenere to be implimented (' + key + ')');
+    return (resultat);
 
 }
 
@@ -175,13 +210,12 @@ function applyBeaufort(char, key) {
         if (char[i] == ' ')
             resultat += ' ';
     }
-    return (resultat + ' Beaufort to be implimented (' + key + ')');
+    return (resultat);
 
 }
 
-function applyadfvgx(char,key) {
-    //TO DO : adfvgx to be implimented
-    return (char + ' adfvgx to be implimented(' + key + ')');
+function applyNone(char, key) {
+    //TO DO : None to be implimented
+    return (char);
 
 }
-
