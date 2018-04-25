@@ -86,10 +86,10 @@ function applyConvert(char) {
 
 function applyAffine(char, a, b) {
     var resultat = "";
+     a=parseInt(a);
+     b=parseInt(b);
     char = char.toUpperCase();
     var longueur = char.length;
-
-
     for (var i = 0; i < longueur; i++) {
         var val = char.charCodeAt(i) - 65;
         if (val >= 0)
@@ -97,7 +97,7 @@ function applyAffine(char, a, b) {
         if (char[i] == ' ')
             resultat += ' ';
     }
-    return (resultat + ' Affine to be implimented (' + a + ',' + b + ')');
+    return (resultat);
 }
 
 function applyPlay(char, key) {

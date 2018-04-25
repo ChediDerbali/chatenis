@@ -86,8 +86,24 @@ function unapplyConvert(char) {
 
 
 function unapplyAffine(char, a, b) {
-    //TO DO : Affine to be implimented
-    return (char + ' Affine to be implimented000000000 (' + a + ',' + b + ')');
+    var resultat = "";
+     a=parseInt(a);
+     b=parseInt(b);
+     for (var j = 1; j < 26; j++) {
+        if ((a * j) % 26 == 1)
+            var invert = j;
+    }
+    char = char.toUpperCase();
+    var longueur = char.length;
+    for (var i = 0; i < longueur; i++) {
+        var val = char.charCodeAt(i) - 65;
+        if (val >= 0)
+            resultat += String.fromCharCode(((invert * (val - b)+26) % 26) + 65);
+        if (char[i] == ' ')
+            resultat += ' ';
+    }
+    
+    return (resultat);
 };
 
 function unapplyPlay(char, key) {
@@ -97,42 +113,70 @@ function unapplyPlay(char, key) {
     key = key.toUpperCase();
     var matrice = "";
     var j = 0;
-    for (var i = 0; i < key.length; i++){
-        if (matrice.indexOf(key[i]) < 0){
-            matrice+=key[i];
+    for (var i = 0; i < key.length; i++) {
+        if (matrice.indexOf(key[i]) < 0) {
+            matrice += key[i];
         }
     }
-    for (var i=0;i<25;i++){
-        if(matrice.length<25){
-            if(matrice.indexOf(Alphabet[i]) < 0){
-                matrice+=Alphabet[i];
+    for (var i = 0; i < 25; i++) {
+        if (matrice.length < 25) {
+            if (matrice.indexOf(Alphabet[i]) < 0) {
+                matrice += Alphabet[i];
             }
         }
     }
-    while(j < char.length-1){
+    while (j < char.length - 1) {
         var a = matrice.indexOf(char[j]);
-        var b = matrice.indexOf(char[j+1]); 
-        if(parseInt(a/5)==parseInt(b/5)){
-            resultat += matrice[5*parseInt(a/5)+(5+a-1)%5];
-            resultat += matrice[5*parseInt(b/5)+(5+b-1)%5];
+        var b = matrice.indexOf(char[j + 1]);
+        if (parseInt(a / 5) == parseInt(b / 5)) {
+            resultat += matrice[5 * parseInt(a / 5) + (5 + a - 1) % 5];
+            resultat += matrice[5 * parseInt(b / 5) + (5 + b - 1) % 5];
+        } else if (a % 5 == b % 5) {
+            resultat += matrice[parseInt(a - 5 + 25) % 25];
+            resultat += matrice[parseInt(b - 5 + 25) % 25];
+        } else {
+            resultat += matrice[(5 * parseInt(a / 5) + b % 5) % 25];
+            resultat += matrice[(5 * parseInt(b / 5) + a % 5) % 25];
         }
-        else if(a%5==b%5){
-            resultat += matrice[parseInt(a-5+25)%25];
-            resultat += matrice[parseInt(b-5+25)%25];
-        }
-        else{
-            resultat += matrice[(5*parseInt(a/5)+b%5)%25];
-            resultat += matrice[(5*parseInt(b/5)+a%5)%25];
-        }
-        j = j+2;
+        j = j + 2;
     }
-    
+
     return (resultat);
 };
 
 function unapplyPorta(char, key) {
-    //TO DO : Porta to be implimented
-    return (char + ' Porta to be implimented00000000000000 (' + key + ')');
+    Alphabet = new Array(13);
+    alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    Alphabet[0] = "NOPQRSTUVWXYZABCDEFGHIJKLM"; // AB
+    Alphabet[1] = "ZNOPQRSTUVWXYBCDEFGHIJKLMA"; // CD
+    Alphabet[2] = "YZNOPQRSTUVWXCDEFGHIJKLMAB"; // EF
+    Alphabet[3] = "XYZNOPQRSTUVWDEFGHIJKLMABC"; // GH
+    Alphabet[4] = "WXYZNOPQRSTUVEFGHIJKLMABCD"; // IJ
+    Alphabet[5] = "VWXYZNOPQRSTUFGHIJKLMABCDE"; // KL
+    Alphabet[6] = "UVWXYZNOPQRSTGHIJKLMABCDEF"; // MN
+    Alphabet[7] = "TUVWXYZNOPQRSHIJKLMABCDEFG"; // OP
+    Alphabet[8] = "STUVWXYZNOPQRIJKLMABCDEFGH"; // QR
+    Alphabet[9] = "RSTUVWXYZNOPQJKLMABCDEFGHI"; // ST
+    Alphabet[10] = "QRSTUVWXYZNOPKLMABCDEFGHIJ"; // UV
+    Alphabet[11] = "PQRSTUVWXYZNOLMABCDEFGHIJK"; // WX
+    Alphabet[12] = "OPQRSTUVWXYZNMABCDEFGHIJKL"; // YZ
+    char = char.toUpperCase();
+    key = key.toUpperCase();
+    var longueur = char.length;
+    var keyLong = key.length;
+    var resultat = "";
+    for (var i = 0; i < longueur; i++) {
+        var val = char.charCodeAt(i) - 65;
+        var valKey = key.charCodeAt(i % keyLong) - 65;
+        if (val >= 0) {
+            var a = Alphabet[parseInt(valKey / 2)].indexOf(char[i]);
+            resultat += alpha[parseInt(a)];
+        }
+        if (char[i] == ' ')
+            resultat += ' ';
+    }
+
+    return (resultat);
 };
 
 function unapplyVigenere(char, key) {

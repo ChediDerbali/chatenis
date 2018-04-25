@@ -262,11 +262,11 @@ FriendlyChat.resetMaterialTextfield = function (element) {
 FriendlyChat.MESSAGE_TEMPLATE =
   '<div class="message-container">' +
   '<div class="spacing"><div class="pic"></div></div>' +
-  '<div class="name h3 text-dark"></div>' +
-  '<div class="message h6"></div>' +
+  '<div class="name h3" style="color:red"></div>' +
+  '<div class="message h4"></div>' +
   '<button type="button" class="btn btn-success btn-sm" onclick="">Decypher</button>' +
-  '<div class="unn h6 text-danger"></div>' +
-  '<div class="dropdown-divider"></div>' +
+  '<div class="unn h4 text-danger"></div>' +
+  '<hr/>' +
   '</div>';
 
 // A loading image URL.
